@@ -23,7 +23,6 @@ const Header = () => {
       <div className='flex space-x-4 items-center'>
         <NextImage
           src='/logo.png'
-          objectFit='contain'
           alt='Ryan Records Logo'
           height={30}
           width={30}

@@ -21,7 +21,6 @@ const Footer = () => {
               <div className='relative'>
                 <NextImage
                   src='/logo.png'
-                  objectFit='contain'
                   alt='Ryan Records Logo'
                   height={30}
                   width={30}
