@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Ryan Records',
   description: 'A record label for Ryans, by Ryans.',
   openGraph: {
-    url: 'https://ryanmeetup.com',
+    url: 'https://ryan-records.vercel.app',
     title: 'Ryan Records',
     description: 'A record label for Ryans, by Ryans.',
     images: [
