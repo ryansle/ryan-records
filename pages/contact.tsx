@@ -8,8 +8,11 @@ import type { NextPage } from 'next';
 
 const ContactPage: NextPage = () => {
   return (
-    <Layout className='space-y-4'>
-      <Heading>Contact Us</Heading>
+    <Layout>
+      <Heading className='mb-4'>Contact Us</Heading>
+      <Text className='mb-10'>
+        Is your name Ryan? Wanna make music with other Ryans? Get in contact with the Ryans at Ryan Records Music and let&apos;s chat!
+      </Text>
       <ContactForm />
     </Layout>
   );

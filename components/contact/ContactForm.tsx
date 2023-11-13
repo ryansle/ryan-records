@@ -151,7 +151,6 @@ const ContactForm = () => {
             <div className='col-span-2 sm:col-span-1'>
               <Input
                 label='Subject'
-                placeholder='Official Ryan Business'
                 required
                 {...register('subject', {
                   onBlur: (event) => event.target.value === '' ?
@@ -164,7 +163,6 @@ const ContactForm = () => {
               <Textarea
                 id='message'
                 label='Message'
-                placeholder='Talk about BIG and IMPORTANT Ryan topics here'
                 required
                 {...register('message', {
                   onBlur: (event) => event.target.value === '' ?
@@ -175,11 +173,11 @@ const ContactForm = () => {
           </div>
 
           <button
-            className='float-right w-full flex'
+            className='float-right flex items-center border px-4 py-2 rounded disabled:border-gray-700 disabled:text-gray-700'
             onClick={handleSubmit((data) => sendEmail(data as Form))}
             disabled={Object.keys(errors).length !== 0}
           >
-            <span>
+            <span className='mr-4'>
               {loading ? <Loader /> : <Send />}
             </span>
             {loading ? 'Loading...' : 'Send'}
@@ -193,7 +191,7 @@ const ContactForm = () => {
           setOpen={setOpenAlert}
           title='Email Sent!'
         >
-          Expect an email back from theryanmeetup@gmail.com soon!
+          Expect an email back from contact.ryanrecords@gmail.com soon!
         </Toast>
       </div>
     </form>
