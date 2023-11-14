@@ -8,7 +8,9 @@ import NextImage from 'next/image';
 const Header = () => {
   const routes = [
     { text: 'About', href: '/about' },
-    { text: 'Contact Us', href: '/contact' }
+    { text: 'Releases', href: '/releases' },
+    { text: 'Shows', href: '/shows' },
+    { text: 'Contact Us', href: '/contact' },
   ];
 
   const socials = [
