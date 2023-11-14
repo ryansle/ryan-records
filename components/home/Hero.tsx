@@ -37,35 +37,42 @@ const Hero = () => {
     {
       href: 'https://www.beatport.com/label/ryan-records/116312',
       icon: <Music />,
-      cta: 'Check out our music',
+      cta: 'Music',
     },
     {
       href: 'https://www.instagram.com/ryanrecordsmusic/',
       icon: <Instagram />,
-      cta: 'Follow us on Instagram',
+      cta: 'Instagram',
     }
   ];
 
   return (
     <div className='w-full relative h-screen mb-10'>
-      <div className='mx-2 absolute text-center align-center flex flex-col justify-center w-full items-center z-30 h-[670px] lg:h-[800px]'>
-        <Heading className='hidden mb-8 lg:block' size='2xl'>
-          Welcome to Ryan Records.
-        </Heading>
-        <div className='block lg:hidden mb-4'>
-          <Heading size='xl'>
+      <video
+        className='brightness-50 z-10 w-full border-b border-gray-700 block sm:hidden'
+        src='https://i.imgur.com/2kpVPna.mp4'
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
+
+      <div className='mx-2 w-full absolute text-center flex flex-col items-center content-center justify-center z-20 mt-6 sm:h-[300px] md:h-[400px] lg:h-[600px] xl:h-[750px]'>
+        <div className='font-cooper'>
+          <h2 className='text-display2 lg:text-5xl xl:text-7xl'>
             Welcome to
-          </Heading>
-          <Heading size='xl'>
+          </h2>
+          <h1 className='text-5xl lg:text-7xl xl:text-9xl'>
+            <span className='hidden'>Welcome to</span>{' '}
             Ryan Records.
-          </Heading>
+          </h1>
+          <h3 className='text-xl mt-4 lg:text-display3'>
+            A record label for Ryans, by Ryans.
+          </h3>
+          <h3 className='text-lg mt-2 lg:text-xl xl:text-3xl'>
+            Founded by Ryan after the Ryan Rave.
+          </h3>
         </div>
-        <Heading size='lg'>
-          A record label for Ryans, by Ryans.
-        </Heading>
-        <Heading size='md'>
-          Founded by Ryan after the Ryan Rave.
-        </Heading>
 
         <div className='flex space-x-4 mt-10'>
           {buttons.map((button) => (
@@ -80,13 +87,14 @@ const Hero = () => {
       </div>
 
       <video
-        className='brightness-50 z-10 w-full border-b border-gray-700'
-        src='/dj.mov'
+        className='brightness-50 z-10 w-full border-b border-gray-700 hidden sm:block'
+        src='https://i.imgur.com/2kpVPna.mp4'
         autoPlay
         loop
         muted
+        playsInline
       />
-    </div>
+    </div >
   );
 };
 
