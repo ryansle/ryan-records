@@ -49,7 +49,7 @@ type Talent = {
   name: string;
   location: string;
   headshot: ContentfulImage;
-  biography: string;
+  biography?: string;
 }
 
 // #endregion

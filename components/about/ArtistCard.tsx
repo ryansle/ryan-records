@@ -15,29 +15,23 @@ type ArtistCardProps = {
 }
 
 const ArtistCard = (props: ArtistCardProps) => {
-  const { name, location, headshot, biography } = props.talent;
+  const { name, location, headshot } = props.talent;
 
   return (
-    <div className='border p-4 rounded border-gray-700'>
-      <div className='flex'>
-        <NextImage
-          className='rounded-xl object-cover'
-          src={convertImageUrl(headshot)}
-          width={200}
-          height={100}
-          alt={name}
-        />
-
-        <div className='ml-4 space-y-4'>
-          <Heading size='md'>{name}</Heading>
-          <Text size='xs'>
-            {biography}
-          </Text>
-          <Text size='xs' className='flex items-center text-white'>
-            <Pin className='mr-2 fill-white' /> {location}
-          </Text>
-        </div>
-      </div>
+    <div className='flex flex-col justify-center items-center'>
+      <NextImage
+        className='rounded-full object-cover'
+        src={convertImageUrl(headshot)}
+        width={250}
+        height={100}
+        alt={name}
+      />
+      <Heading className='text-center mt-4'>
+        {name}
+      </Heading>
+      <Text size='sm' className='flex items-center'>
+        <Pin className='mr-2' /> {location}
+      </Text>
     </div>
   );
 };

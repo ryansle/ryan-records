@@ -38,7 +38,7 @@ const Text = (props: TextProps) => {
   } = props;
 
   return (
-    <p className={`${className} ${getVariantClasses(size)}`}>
+    <p className={`${className} ${getVariantClasses(size, variant)}`}>
       {children}
     </p>
   );
