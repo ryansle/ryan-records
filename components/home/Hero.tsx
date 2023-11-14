@@ -33,6 +33,7 @@ const ExternalLink = (props: ExternalLinkProps) => {
 };
 
 const Hero = () => {
+  // TODO: theme buttons cooler
   const buttons = [
     {
       href: 'https://www.beatport.com/label/ryan-records/116312',
@@ -57,16 +58,16 @@ const Hero = () => {
         playsInline
       />
 
-      <div className='mx-2 w-full absolute text-center flex flex-col items-center content-center justify-center z-20 mt-6 sm:h-[300px] md:h-[400px] lg:h-[600px] xl:h-[750px]'>
+      <div className='mx-2 w-full absolute text-center flex flex-col items-center content-center justify-center z-20 mt-6 sm:h-[300px] md:h-[400px] lg:h-[600px] xl:h-[780px]'>
         <div className='font-cooper'>
-          <h2 className='text-display2 lg:text-5xl xl:text-7xl'>
+          <h2 className='text-display2 lg:text-5xl xl:hidden'>
             Welcome to
           </h2>
-          <h1 className='text-5xl lg:text-7xl xl:text-9xl'>
-            <span className='hidden'>Welcome to</span>{' '}
+          <h1 className='text-5xl flex lg:text-7xl'>
+            <span className='hidden xl:block'>Welcome to&nbsp;</span>
             Ryan Records.
           </h1>
-          <h3 className='text-xl mt-4 lg:text-display3'>
+          <h3 className='text-xl mt-6 lg:text-display3'>
             A record label for Ryans, by Ryans.
           </h3>
           <h3 className='text-lg mt-2 lg:text-xl xl:text-3xl'>
