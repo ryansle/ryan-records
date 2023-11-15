@@ -6,4 +6,10 @@ const fetchTalent = async () => {
   return data.items.map((entry) => entry.fields);
 };
 
-export { fetchTalent };
+const fetchReleases = async () => {
+  const data = await client.getEntries(({ content_type: 'releases' }));
+
+  return data.items.map((entry) => entry.fields);
+};
+
+export { fetchTalent, fetchReleases };

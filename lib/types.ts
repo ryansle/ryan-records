@@ -52,9 +52,17 @@ type Talent = {
   biography?: string;
 }
 
+type Release = {
+  title: string;
+  spotifyLink?: string;
+  beatportLink?: string;
+  coverArt: ContentfulImage;
+  artist: string;
+}
 // #endregion
 
 export type {
   ContentfulImage,
   Talent,
+  Release
 };
