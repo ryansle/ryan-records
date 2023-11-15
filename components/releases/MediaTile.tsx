@@ -22,7 +22,7 @@ const MediaTile = (props: MediaTileProps) => {
     artist
   } = props.data;
 
-  const iconStyle = 'w-6 h-6'
+  const iconStyle = 'w-6 h-6';
 
   const streaming = [
     { url: spotifyLink, icon: <Spotify className={iconStyle} /> },

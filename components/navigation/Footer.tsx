@@ -3,12 +3,17 @@ import { Heading, Text } from '@/components/global';
 import NextLink from 'next/link';
 import NextImage from 'next/image';
 import { FaInstagram as Instagram } from 'react-icons/fa';
+import { SiBeatport as Beatport } from 'react-icons/si';
 
 const socials = [
   {
     href: 'https://www.instagram.com/ryanrecordsmusic/',
     icon: <Instagram className='h-5 w-5' color='gray' />
   },
+  {
+    href: 'https://www.beatport.com/label/ryan-records/116312',
+    icon: <Beatport className='h-5 w-5' color='gray' />
+  }
 ];
 
 const Footer = () => {
