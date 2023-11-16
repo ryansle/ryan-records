@@ -21,13 +21,15 @@ const ReleasesPage = (props: ReleasesPageProps) => {
     <Layout className='space-y-4'>
       <Heading>Releases</Heading>
 
-      <div className='grid grid-cols-12'>
-        {releases?.map((song, index) => (
-          <div className='col-span-12 md:col-span-4' key={index}>
-            <MediaTile data={song as Release} />
-          </div>
-        ))}
-      </div>
+      {!isLoading && (
+        <div className='grid grid-cols-12'>
+          {releases?.map((song, index) => (
+            <div className='col-span-12 md:col-span-4' key={index}>
+              <MediaTile data={song as Release} />
+            </div>
+          ))}
+        </div>
+      )}
     </Layout>
   );
 };

@@ -23,7 +23,7 @@ const AboutPage = (props: AboutPageProps) => {
     <Layout>
       <Heading className='mb-4'>About Us</Heading>
       <div className='grid grid-cols-2 flex items-center justify-between'>
-        <div className='col-span-2 space-y-4 md:col-span-1'>
+        <div className='col-span-2 space-y-4 mb-4 md:col-span-1 md:mb-0'>
           <Text>
             On September 2nd, 2023,{' '}
             <NextLink
@@ -61,13 +61,15 @@ const AboutPage = (props: AboutPageProps) => {
       <Heading className='text-center mb-10'>
         Meet our Talented Ryan Artists
       </Heading>
-      <div className='grid grid-cols-12 gap-4 pt-4'>
-        {talent?.map((artist, index) => (
-          <div className='col-span-6 md:col-span-4' key={index}>
-            <ArtistCard talent={artist as Talent} />
-          </div>
-        ))}
-      </div>
+      {!isLoading && (
+        <div className='grid grid-cols-12 gap-4 pt-4'>
+          {talent?.map((artist, index) => (
+            <div className='col-span-6 md:col-span-4' key={index}>
+              <ArtistCard talent={artist as Talent} />
+            </div>
+          ))}
+        </div>
+      )}
     </Layout>
   );
 };

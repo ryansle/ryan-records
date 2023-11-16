@@ -29,12 +29,14 @@ const MediaTile = (props: MediaTileProps) => {
     { url: beatportLink, icon: <Beatport className={iconStyle} /> },
   ];
 
+  const imageUrl = convertImageUrl(coverArt);
+
   return (
     <div className='border flex flex-col items-center justify-center border-gray-700 rounded-xl h-full transition ease-in duration-300 hover:border-white hover:scale-102'>
-      <div className='relative w-full flex items-center justify-center rounded-xl h-80 overflow-hidden bg-center'>
+      <div className='relative w-full flex items-center flex-col justify-center rounded-xl h-80 overflow-hidden bg-center'>
         <div className='w-full h-full brightness-30'>
           <NextImage
-            src={convertImageUrl(coverArt)}
+            src={imageUrl ?? '/logo.png'}
             alt={title}
             fill
             style={{ objectFit: 'cover' }}
@@ -42,8 +44,8 @@ const MediaTile = (props: MediaTileProps) => {
         </div>
         <div className='absolute w-full inset-x-0 text-white text-xs text-center leading-4 flex items-center justify-center flex-col px-8'>
           <Heading size='2xl'>{title}</Heading>
-          <Heading size='md'>{artist}</Heading>
-          <div className='flex space-x-4 mt-2'>
+          <Heading size='sm'>by {artist}</Heading>
+          <div className='flex space-x-4 mt-4'>
             {streaming.map((platform, index) => (
               <div key={index}>
                 {platform.url && (
@@ -56,7 +58,7 @@ const MediaTile = (props: MediaTileProps) => {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

@@ -1,5 +1,6 @@
 // Components
 import { FaInstagram as Instagram } from 'react-icons/fa';
+import { SiBeatport as Beatport } from 'react-icons/si';
 import { Heading } from '@/components/global';
 import { MobileMenu } from '@/components/navigation';
 import NextLink from 'next/link';
@@ -16,8 +17,14 @@ const Header = () => {
   const socials = [
     {
       href: 'https://www.instagram.com/ryanrecordsmusic/',
-      icon: <Instagram className='h-8 w-8' color='white' />
+      icon: <Instagram className='h-8 w-8' color='white' />,
+      name: 'Instagram',
     },
+    {
+      href: 'https://www.beatport.com/label/ryan-records/116312',
+      icon: <Beatport className='h-8 w-8' color='white' />,
+      name: 'Beatport',
+    }
   ];
 
   return (
@@ -46,14 +53,16 @@ const Header = () => {
           ))}
         </div>
 
-        {socials.map((channel, index) => (
-          <NextLink key={index} href={channel.href}>
-            {channel.icon}
-          </NextLink>
-        ))}
+        <div className='hidden md:flex md:space-x-4 md:block'>
+          {socials.map((channel, index) => (
+            <NextLink key={index} href={channel.href}>
+              {channel.icon}
+            </NextLink>
+          ))}
+        </div>
 
         <div className='md:hidden'>
-          <MobileMenu content={routes} />
+          <MobileMenu content={routes} socials={socials} />
         </div>
       </div>
     </header>

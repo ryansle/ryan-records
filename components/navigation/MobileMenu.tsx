@@ -5,6 +5,9 @@ import { Menu, Transition } from '@headlessui/react';
 import NextLink from 'next/link';
 import { GiHamburgerMenu as Hamburger } from 'react-icons/gi';
 
+// Types
+import type { ReactNode } from 'react';
+
 type MenuOption = {
   text: string;
   href: string;
@@ -12,10 +15,15 @@ type MenuOption = {
 
 type MobileMenuProps = {
   content: MenuOption[];
+  socials: {
+    href: string;
+    icon: ReactNode;
+    name: string;
+  }[]
 };
 
 const MobileMenu = (props: MobileMenuProps) => {
-  const { content } = props;
+  const { content, socials } = props;
 
   return (
     <div className='flex items-center justify-center'>
@@ -43,19 +51,28 @@ const MobileMenu = (props: MobileMenuProps) => {
                   className='absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none'
                 >
                   <div className='py-1'>
-                    {content.map((row) => (
+                    {content.map((row, index) => (
                       <Menu.Item key={row.text}>
                         {({ active }) => (
                           <NextLink
                             className={`${active
                               ? 'bg-gray-100 text-gray-900'
                               : 'text-gray-700'
-                              } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
+                              } ${index === content.length - 1 && 'border-b'} 
+                              flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
                             href={row.href}
                           >
                             {row.text}
                           </NextLink>
                         )}
+                      </Menu.Item>
+                    ))}
+
+                    {socials.map((channel) => (
+                      <Menu.Item key={channel.href}>
+                        <NextLink href={channel.href} className='text-gray-700 flex w-full px-4 py-2 text-sm leading-5 text-left'>
+                          {channel.name}
+                        </NextLink>
                       </Menu.Item>
                     ))}
                   </div>

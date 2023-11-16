@@ -1,5 +1,5 @@
 // Components
-import { Heading, Text } from '@/components/global';
+import { Text } from '@/components/global';
 import NextLink from 'next/link';
 import NextImage from 'next/image';
 import { FaInstagram as Instagram } from 'react-icons/fa';

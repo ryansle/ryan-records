@@ -17,11 +17,13 @@ type ArtistCardProps = {
 const ArtistCard = (props: ArtistCardProps) => {
   const { name, location, headshot } = props.talent;
 
+  const imageUrl = convertImageUrl(headshot);
+
   return (
     <div className='flex flex-col justify-center items-center'>
       <NextImage
         className='rounded-full object-cover'
-        src={convertImageUrl(headshot)}
+        src={imageUrl ?? '/logo.png'}
         width={250}
         height={100}
         alt={name}
