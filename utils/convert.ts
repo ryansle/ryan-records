@@ -3,11 +3,11 @@
 import type { ContentfulImage } from '@/lib/types';
 
 const convertImageUrl = (object: ContentfulImage) => {
-  const url = object?.fields.file.url;
+  if (object) {
+    const url = object?.fields.file.url;
 
-  console.log(object);
-
-  return `https://${url.replace('//', '')}`;
+    return `https://${url.replace('//', '')}`;
+  }
 };
 
 export { convertImageUrl };
