@@ -24,7 +24,7 @@ const ReleasesPage = (props: ReleasesPageProps) => {
     <Layout className='space-y-4'>
       <Heading>Releases</Heading>
 
-      <Text>Keep up to date with all of Ryan Record&apos;s newest releases!</Text>
+      <Text>Keep up to date with all of the newest releases from Ryan Records!</Text>
 
       {!isLoading && (
         <>

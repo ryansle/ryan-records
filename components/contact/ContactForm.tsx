@@ -151,6 +151,7 @@ const ContactForm = () => {
             <div className='col-span-2 sm:col-span-1'>
               <Input
                 label='Subject'
+                placeholder='My name is Ryan...'
                 required
                 {...register('subject', {
                   onBlur: (event) => event.target.value === '' ?
@@ -163,6 +164,7 @@ const ContactForm = () => {
               <Textarea
                 id='message'
                 label='Message'
+                placeholder='Type a message...'
                 required
                 {...register('message', {
                   onBlur: (event) => event.target.value === '' ?
