@@ -37,7 +37,8 @@ const Header = () => {
           width={30}
         />
         <NextLink href='/'>
-          <Heading>RYAN RECORDS</Heading>
+          <Heading className='block lg:hidden' size='sm'>RYAN RECORDS</Heading>
+          <Heading className='hidden lg:block'>RYAN RECORDS</Heading>
         </NextLink>
       </div>
       <div className='space-x-4 flex items-center'>

@@ -21,7 +21,7 @@ const Toast = (props: ToastProps) => {
 
   return (
     <Transition
-      className={className}
+      className={`${className} mt-0.5`}
       show={open}
       enter='transition ease-out duration-100'
       enterFrom='transform opacity-0 scale-95'
@@ -31,7 +31,7 @@ const Toast = (props: ToastProps) => {
       leaveTo='transform opacity-0 scale-95'
     >
       <div
-        className='flex items-center w-full max-w-sm p-4 text-white rounded-lg bg-gray-800 shadow border border-gray-700'
+        className='flex items-center w-full max-w-sm p-4 text-white rounded-lg bg-gray-800 shadow border border-gray-700 mt-10'
         role='alert'
       >
         <div className='inline-flex items-center justify-center flex-shrink-0 w-10 h-10 rounded-lg bg-green-600'>

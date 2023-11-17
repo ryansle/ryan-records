@@ -46,6 +46,9 @@ const Footer = () => {
                 <li className='mb-2'>
                   <NextLink href='https://www.instagram.com/ryanrecordsmusic/' className='hover:underline'>Instagram</NextLink>
                 </li>
+                <li className='mb-2'>
+                  <NextLink href='https://www.beatport.com/label/ryan-records/116312' className='hover:underline'>Beatport</NextLink>
+                </li>
               </ul>
             </div>
             <div className='col-span-3'>
@@ -59,7 +62,9 @@ const Footer = () => {
                     <li className='mb-2'>
                       <NextLink href='https://react.dev/' className='hover:underline'>React.js</NextLink>
                     </li>
-
+                    <li className='mb-2'>
+                      <NextLink href='https://tanstack.com/query/v3/' className='hover:underline'>React-Query</NextLink>
+                    </li>
                   </ul>
                 </div>
                 <div className='col-span-1'>
@@ -69,6 +74,9 @@ const Footer = () => {
                     </li>
                     <li className='mb-2'>
                       <NextLink href='https://tailwindcss.com/' className='hover:underline'>Tailwind CSS</NextLink>
+                    </li>
+                    <li className='mb-2'>
+                      <NextLink href='https://contentful.com/' className='hover:underline'>Contentful</NextLink>
                     </li>
                   </ul>
                 </div>

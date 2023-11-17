@@ -42,13 +42,13 @@ const Heading = (props: HeadingProps) => {
       case '3xl':
         return <h1 className={`${styles} text-9xl`}>{children}</h1>;
       case '2xl':
-        return <h1 className={`${styles} text-4xl lg:text-7xl`}>{children}</h1>;
+        return <h1 className={`${styles} text-7xl`}>{children}</h1>;
       case 'xl':
         return <h1 className={`${styles} text-5xl`}>{children}</h1>;
       case 'lg':
-        return <h2 className={`${styles} text-xl xl:text-4xl`}>{children}</h2>;
+        return <h2 className={`${styles} text-4xl`}>{children}</h2>;
       case 'md':
-        return <h3 className={`${styles} text-base lg:text-3xl`}>{children}</h3>;
+        return <h3 className={`${styles} text-3xl`}>{children}</h3>;
       default:
         return <h4 className={`${styles} text-xl`}>{children}</h4>;
     }

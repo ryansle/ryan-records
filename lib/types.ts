@@ -59,10 +59,16 @@ type Release = {
   coverArt: ContentfulImage;
   artist: string;
 }
+
+type SocialMedia = {
+  platform: string;
+  url: string;
+}
 // #endregion
 
 export type {
   ContentfulImage,
   Talent,
-  Release
+  Release,
+  SocialMedia,
 };

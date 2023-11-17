@@ -173,12 +173,12 @@ const ContactForm = () => {
           </div>
 
           <button
-            className='float-right flex items-center border px-4 py-2 rounded disabled:border-gray-700 disabled:text-gray-700'
+            className='float-right flex w-full justify-center font-semibold items-center border px-4 py-2 rounded disabled:border-gray-700 disabled:text-gray-700'
             onClick={handleSubmit((data) => sendEmail(data as Form))}
             disabled={Object.keys(errors).length !== 0}
           >
             <span className='mr-4'>
-              {loading ? <Loader /> : <Send />}
+              {loading ? <Loader /> : <Send className='w-5 h-5' />}
             </span>
             {loading ? 'Loading...' : 'Send'}
           </button>

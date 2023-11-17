@@ -12,4 +12,14 @@ const fetchReleases = async () => {
   return data.items.map((entry) => entry.fields);
 };
 
-export { fetchTalent, fetchReleases };
+const fetchSocials = async () => {
+  const data = await client.getEntries(({ content_type: 'socials' }));
+
+  return data.items.map((entry) => entry.fields);
+};
+
+export {
+  fetchTalent,
+  fetchReleases,
+  fetchSocials
+};
