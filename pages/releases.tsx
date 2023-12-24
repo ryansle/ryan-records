@@ -30,7 +30,7 @@ const ReleasesPage = (props: ReleasesPageProps) => {
         <>
           <Heading size='md'>Singles</Heading>
 
-          <div className='grid grid-cols-12'>
+          <div className='grid grid-cols-12 gap-4'>
             {singles?.map((song, index) => (
               <div className='col-span-12 md:col-span-4' key={index}>
                 <MediaTile data={song as Release} />
@@ -39,7 +39,7 @@ const ReleasesPage = (props: ReleasesPageProps) => {
           </div>
 
           {albums?.length !== 0 && (
-            <div className='grid grid-cols-12'>
+            <div className='grid grid-cols-12 gap-4'>
               {albums?.map((album, index) => (
                 <div className='col-span-12 md:col-span-4' key={index}>
                   <MediaTile data={album as Release} />

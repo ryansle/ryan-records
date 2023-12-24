@@ -48,9 +48,9 @@ const Hero = () => {
   ];
 
   return (
-    <div className='w-full relative h-screen mb-10'>
+    <div className='w-full relative h-screen mb-10 overflow-x-hidden'>
       <video
-        className='brightness-50 z-10 w-full border-b border-gray-700 block sm:hidden'
+        className='brightness-50 z-10 w-full border-b border-gray-700 object-cover absolute h-screen w-screen top-0 left-0'
         src='https://i.imgur.com/2kpVPna.mp4'
         autoPlay
         loop
@@ -58,7 +58,7 @@ const Hero = () => {
         playsInline
       />
 
-      <div className='mx-2 w-full absolute text-center flex flex-col items-center content-center justify-center z-20 mt-6 sm:h-[300px] md:h-[400px] lg:h-[600px] xl:h-[780px]'>
+      <div className='mx-2 w-full absolute text-center flex flex-col items-center content-center justify-center z-20 h-screen'>
         <div className='font-cooper'>
           <h2 className='text-display2 lg:text-5xl xl:hidden'>
             Welcome to
@@ -86,16 +86,7 @@ const Hero = () => {
           ))}
         </div>
       </div>
-
-      <video
-        className='brightness-50 z-10 w-full border-b border-gray-700 hidden sm:block'
-        src='https://i.imgur.com/2kpVPna.mp4'
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-    </div >
+    </div>
   );
 };
 

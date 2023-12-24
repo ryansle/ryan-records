@@ -18,8 +18,15 @@ const fetchSocials = async () => {
   return data.items.map((entry) => entry.fields);
 };
 
+const fetchShows = async () => {
+  // @ts-ignore
+  const data = await client.getEntries(({ content_type: 'shows', order: '-sys.createdAt' }));
+
+  return data.items.map((entry) => entry.fields);
+};
 export {
   fetchTalent,
   fetchReleases,
-  fetchSocials
+  fetchSocials,
+  fetchShows
 };

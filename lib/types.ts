@@ -64,6 +64,16 @@ type SocialMedia = {
   platform: string;
   url: string;
 }
+
+type Show = {
+  title: string;
+  poster: ContentfulImage;
+  date: string;
+  venue: string;
+  city: string;
+  ticketLink: string;
+  tableLink: string;
+}
 // #endregion
 
 export type {
@@ -71,4 +81,5 @@ export type {
   Talent,
   Release,
   SocialMedia,
+  Show,
 };
