@@ -1,6 +1,6 @@
 // Components
 import { Layout } from '@/components/navigation';
-import { Heading, Text } from '@/components/global';
+import { Heading } from '@/components/global';
 import { ShowTile } from '@/components/shows';
 
 // Types
