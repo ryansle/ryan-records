@@ -68,13 +68,15 @@ const ShowTile = (props: ShowTileProps) => {
             {new Date(date).getDate().toString()}
           </p>
         </div>
-        <NextImage
-          className='w-full h-full rounded-xl'
-          src={convertImageUrl(poster) as string}
-          alt={title}
-          fill
-          style={{ objectFit: 'cover' }}
-        />
+        <NextLink href={ticketLink}>
+          <NextImage
+            className='w-full h-full rounded-xl'
+            src={convertImageUrl(poster) as string}
+            alt={title}
+            fill
+            style={{ objectFit: 'cover' }}
+          />
+        </NextLink>
       </div>
 
       <div className='mt-2'>
