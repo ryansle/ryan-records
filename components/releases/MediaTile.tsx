@@ -43,7 +43,7 @@ const MediaTile = (props: MediaTileProps) => {
           />
         </div>
         <div className='absolute w-full inset-x-0 text-white text-xs text-center leading-4 flex items-center justify-center flex-col px-8'>
-          <Heading size='2xl'>{title}</Heading>
+          <Heading size={title.length > 7 ? 'lg' : '2xl'}>{title}</Heading>
           <Heading size='sm'>by {artist}</Heading>
           <div className='flex space-x-4 mt-4'>
             {streaming.map((platform, index) => (
