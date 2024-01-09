@@ -54,17 +54,18 @@ const ShowTile = (props: ShowTileProps) => {
     venue,
     city,
     ticketLink,
-    tableLink
+    tableLink,
+    artist
   } = props.show;
 
   return (
-    <div className='transition ease-in duration-300 hover:border-white hover:scale-102'>
+    <div className='aspect-square transition ease-in duration-300 hover:border-white hover:scale-102'>
       <div className='relative h-96 border border-gray-700 rounded-xl z-0'>
         <div className='absolute block top-2 right-2 py-1 px-2 bg-white z-10 text-black rounded font-cooper border border-gray-700'>
           <p className='font-semibold'>{renderMonth(new Date(date).getMonth())}</p>
           <p className='text-center text-2xl -mt-2'>
-            {new Date(date).getDay().toString().length === 1 && '0'}
-            {new Date(date).getDay().toString()}
+            {new Date(date).getDate().toString().length === 1 && '0'}
+            {new Date(date).getDate().toString()}
           </p>
         </div>
         <NextImage
@@ -77,6 +78,9 @@ const ShowTile = (props: ShowTileProps) => {
       </div>
 
       <div className='mt-2'>
+        <Heading size='md' className='text-center mb-2'>
+          {artist}
+        </Heading>
         <Heading size='sm' className='text-center'>
           {venue} • {city}
         </Heading>

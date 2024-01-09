@@ -73,6 +73,7 @@ type Show = {
   city: string;
   ticketLink: string;
   tableLink: string;
+  artist: string;
 }
 // #endregion
 

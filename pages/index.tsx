@@ -30,7 +30,7 @@ const HomePage = (props: HomePageProps) => {
 
             <div className='grid grid-cols-12 gap-4'>
               {upcomingShows?.map((show, index) => (
-                <div className='col-span-12 md:col-span-3' key={index}>
+                <div className='col-span-12 md:col-span-4' key={index}>
                   <ShowTile show={show as Show} />
                 </div>
               ))}
