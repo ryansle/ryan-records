@@ -5,15 +5,13 @@ import NextLink from 'next/link';
 import { IoTicket as Ticket } from 'react-icons/io5';
 import { PiBeerBottleFill as Bottle } from 'react-icons/pi';
 
-
-
 // Types
 import { Show } from '@/lib/types';
 import { convertImageUrl } from '@/utils/convert';
 
 type ShowTileProps = {
   show: Show;
-}
+};
 
 const renderMonth = (month: number) => {
   switch (month) {

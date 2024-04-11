@@ -1,5 +1,5 @@
 // Components
-import { Heading } from '@/components/global';
+import NextImage from 'next/image';
 import NextLink from 'next/link';
 import {
   FaMusic as Music,
@@ -20,7 +20,7 @@ const ExternalLink = (props: ExternalLinkProps) => {
 
   return (
     <NextLink href={href}>
-      <button className='rounded px-4 py-2 flex items-center uppercase font-semibold border duration-300 transition ease-linear hover:scale-102'>
+      <button className='rounded px-4 py-2 flex items-center uppercase font-semibold border-gray-600 border duration-300 transition ease-linear hover:scale-102 hover:border-white'>
         <span className='mr-2'>
           {icon}
         </span>
@@ -59,6 +59,13 @@ const Hero = () => {
       />
 
       <div className='mx-2 w-full absolute text-center flex flex-col items-center content-center justify-center z-20 h-screen'>
+        <NextImage
+          className='mb-5 -mt-32'
+          src='/logo.png'
+          alt='Ryan Records Logo'
+          width={80}
+          height={100}
+        />
         <div className='font-cooper'>
           <h2 className='text-display2 lg:text-5xl xl:hidden'>
             Welcome to
@@ -67,7 +74,7 @@ const Hero = () => {
             <span className='hidden xl:block'>Welcome to&nbsp;</span>
             Ryan Records.
           </h1>
-          <h3 className='text-xl mt-6 lg:text-display3'>
+          <h3 className='text-xl mt-10 lg:text-display3'>
             A record label for Ryans, by Ryans.
           </h3>
           <h3 className='text-lg mt-2 lg:text-xl xl:text-3xl'>
